@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812162002) do
+ActiveRecord::Schema.define(version: 20210105172952) do
+
+  create_table "feature_flags", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "value",       default: false,     null: false
+    t.string   "mode",        default: "Default", null: false
+    t.string   "description"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "introFeatureFlagValue"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +43,7 @@ ActiveRecord::Schema.define(version: 20160812162002) do
     t.datetime "updated_at",                          null: false
     t.string   "first_name"
     t.string   "last_name"
+    t.integer  "roleId",                 default: 0,  null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

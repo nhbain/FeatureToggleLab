@@ -1,4 +1,6 @@
 .text-center
-  h1 Home
-  p.text-success this is a landing page
-  p.text-success bootstrap, devise(login, register, settings, sign out), lato-font and slim is configured!
+== yield
+- if (@feature_flag.value && !@user.nil?)
+  h1 Welcome to the Feature Toggle Workshop #{@user.first_name}!
+- else
+  h1 Welcome to the Feature Toggle Workshop!

@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, except: [:home, :about, :contact]
 
   def home
+    @user = current_user
+    @feature_flag = FeatureFlag.first
   end
 
   def about

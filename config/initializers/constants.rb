@@ -1,1 +1,1 @@
-APPLICATION_NAME = 'AppName'
+APPLICATION_NAME = 'DevOps Workshop'
