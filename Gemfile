@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 gem 'rails', '5.0.0'            # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'puma', '3.6.0'             # Use Puma as the app server
+gem 'puma', '3.7.0'             # Use Puma as the app server
 gem 'sass-rails', '5.0.6'       # Use SCSS for stylesheets
 gem 'uglifier', '3.0.0'         # Use Uglifier as compressor for JavaScript assets
 gem 'coffee-rails', '4.2.1'     # Use CoffeeScript for .coffee assets and views
