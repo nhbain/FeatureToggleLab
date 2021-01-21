@@ -27,7 +27,10 @@
 3. Setup up the application
    1. Switch to the application directory
    2. Run `rvm use 2.5.0 --default` (this tells RVM to use ruby version 2.5.0 by default whenever you open up a new terminal window)
-   3. Run `bundle install --without production` (this installs all the gems (packages) required to run the application)
+   3. Run `bundle install --without production` (this installs all the gems (packages) required to run the application) If this fails, try the following:
+        `rvm @global do gem install bundler -v '< 2.0'`
+        `gem uninstall bundler -v 2.2.6`
+        `gem install nio4r -v '1.2.1' -- --with-cflags="-Wno-error=implicit-function-declaration"`
    4. Run `bundle update` (this command upgrades the gem package versions within your gemfile.lock file)
    5. Take a look at `db/seeds.rb` (these are model instances that will be added to the database when we run db:seed in a minute)
    6. Run `bundle exec rake db:setup` (this command sets up a local database instance and runs the database migrations)
