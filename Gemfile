@@ -12,7 +12,7 @@ gem 'jbuilder', '2.6.0'         # Build JSON APIs with ease. Read more: https://
 gem 'bootstrap-sass', '3.3.7'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'slim-rails', '3.1.0'
-gem 'devise', '4.2.0'
+gem 'devise', '4.4.0'
 gem 'sqlite3', '1.3.13'                 # Use sqlite3 as the database for Active Record
 
 group :development, :test do

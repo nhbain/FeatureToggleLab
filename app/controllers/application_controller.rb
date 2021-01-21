@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, except: [:home, :about, :contact]
 
   def home
-    @user = current_user
-    @feature_flag = FeatureFlag.first
+    @user = current_user # this is a shortcut to access the logged in user. The @ symbol tells rails that this value should be accessible by the view
+    @feature_flag = FeatureFlag.first # this is grabbing the first feature flag instance from the database (id: 1). You can access attributes like so: @feature_flag.value => true
   end
 
   def about
