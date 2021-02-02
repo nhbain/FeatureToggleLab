@@ -84,4 +84,3 @@
    4.  Ensure the behavior for each user is the same as it was before since the flag's mode value is currently set to "Default"
    5.  In the rails console, modify and save the FeatureFlag's value so that it is anything other than Default ("Override" and "Global" are common terms to use -- this means that the feature flag's value will take priority over the user group's value for the feature flag)
    6.  Refresh the web page for both users. The behavior should be the same!
-
